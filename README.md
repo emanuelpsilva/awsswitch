@@ -38,7 +38,7 @@ chmod +x /usr/local/bin/awsswitch.sh
 
 ```
 
-> Case you want remove some profiles from the menu list, edita **awsswitch.sh** file and add them to the **IGNORE_PROFILES** variable.
+> Case you want remove some profiles from the menu list, edit **awsswitch.sh** file and add them to the **IGNORE_PROFILES** variable.
 
 3. Run the script for first configuration (follow directions)
 
@@ -68,7 +68,7 @@ aws
 
 ```
 
-The choosed profile will stay active until you run again above command again
+The choosed profile will stay active until you run again above command
 
 - Any time you want to run some aws command, just run:
 
