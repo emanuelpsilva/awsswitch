@@ -90,4 +90,4 @@ awsswitch.sh <your parameters i.e.: s3 ls>
 
 ***
 ## Contributors
-Thanks @MASNathan for the kickstarter push in this great ideia :)
+Thanks [@MASNathan](https://github.com/MASNathan) for the kickstarter push in this great ideia :)
