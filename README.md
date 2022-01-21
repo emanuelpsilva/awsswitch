@@ -77,6 +77,10 @@ The choosed profile will stay active until you run again above command
 aws <your parameters here, i.e.: s3 ls>
 
 ```
+- Case you want use inside a script, because alias are not available, you need to use like this:
+```
+awsswitch.sh <your parameters i.e.: s3 ls>
+```
 
 ## References
 
