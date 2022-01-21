@@ -89,3 +89,5 @@ awsswitch.sh <your parameters i.e.: s3 ls>
 *  [aws-vault](https://github.com/99designs/aws-vault)
 
 ***
+## Contributors
+Thanks @MASNathan for the kickstarter push in this great ideia :)
