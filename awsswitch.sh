@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Instructions:
 #   1 - Copy this script into executable path: sudo cp awsswitch.sh /usr/local/bin/
@@ -43,6 +43,7 @@ run_config()
         echo "Welcome to awsswitch tool. Please select your profile:"
     fi
 
+    PS3="Select AWS profile: "
     OPTIONS=(${PROFILES} "Quit") # add option Quit to list of options
     select OPT in "${OPTIONS[@]}"
     do
