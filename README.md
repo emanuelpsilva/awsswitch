@@ -77,6 +77,12 @@ The choosed profile will stay active until you run again above command
 aws <your parameters here, i.e.: s3 ls>
 
 ```
+- To run other tools wrapped by awsswitch.sh, just add **--** and your command:
+```
+
+aws -- terraform import aws_iam_role.my-role my-role-arn
+
+```
 - Case you want use inside a script, because alias are not available, you need to use like this:
 ```
 awsswitch.sh <your parameters i.e.: s3 ls>

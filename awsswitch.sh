@@ -8,7 +8,8 @@
 #   5 - To run in an interactive shell: aws s3 ls
 #   6 - To run inside a script: /usr/local/bin/awsswitch.sh s3 ls
 
-# 2021-01-20 1.0.0 ESilva - First version
+# 2022-01-20 1.0.0 ESilva - First version
+# 2022-03-07 1.1.0 ESilva - Support for '--' argument that allows a wrapper to run any command (i.e.: aws -- terraform import aws_iam_role.my-role <aws arn>)
 
 IGNORE_PROFILES="common default" # these profile names will not be shown in menu options
 
@@ -72,7 +73,11 @@ run_exec()
         run_config # failed to retrieve current profile, run config
     else
         unalias aws 2>/dev/null # avoid endless loop, this unalias only affects this ephemeral shell instance
-        aws-vault exec ${PROFILE} -- aws ${@} # run aws-vault command
+        if [ "${1}" == "--" ]; then
+            aws-vault exec ${PROFILE} ${@} # run aws-vault wrapper for other commands like terraform import
+        else
+            aws-vault exec ${PROFILE} -- aws ${@} # run aws-vault native command
+        fi
     fi
 }
 
