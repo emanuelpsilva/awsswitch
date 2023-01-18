@@ -57,7 +57,7 @@ run_config()
                 echo "current_profile=${NEW_PROFILE}" > ${CONFIG_FILE} # save choosed profile into config file
                 echo "Changing aws-vault profile to=[${NEW_PROFILE}]..." # intructions to user
                 echo "Please add the following command to your shell profile startup file:"
-                echo "  alias=awsswitch.sh"
+                echo "  alias aws=awsswitch.sh"
                 echo "After the change, please restart your shell terminal"
                 echo "Configuration finished successfully"
                 break;;
